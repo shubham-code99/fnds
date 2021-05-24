@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Fake News Detection System</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Fake News Detection System</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict whether New is authentic or not
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="POST" class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+            <label for="first_name"><b>Title</b></label>
+            <br>
+          <input   id="first_name" name='Title'type="text" class="validate">
+        </div>
+        <div class="input-field col s6">
+
+          <label for="last_name"><b>text </b></label>
+            <br>
+          <input id="last_name"  name="text" type="text" class="validate">
+
+        </div>
+        
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange"  >Hit to Predict</button>
+      </div>
+    </form>
+      </div>
+
+      <br><h4 align="center"  <b>{{pred}}</b></h4>
+        <br>
+
+    </div>
+  </div>
+
+  
+  <footer class="page-footer orange">
+    
+    <div >
+      <div class="container" >
+       © 2021 Copyright: <a class="orange-text text-lighten-3" href="http://materializecss.com">Major Project</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
